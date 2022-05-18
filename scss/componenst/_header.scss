@@ -1,0 +1,109 @@
+/* верхняя черта между header и hero */
+
+
+  .header{
+  background-color: $logo-footer-color;
+  border-bottom:1px solid #ECECEC;
+  }
+   .nav-flex {
+    // align-items: center;
+    display: flex;
+    .nav{
+    align-items: center;
+    display: flex;
+    }
+  }
+  
+   .logo{
+
+    color: $logo-nav-color;
+    font-family: Raleway, sans-serif;
+  
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    font-size: normal;
+    text-decoration: none;
+    font-style: normal;
+     &__part-logo{
+    color: $accent-color;
+  }
+   }
+ 
+  .site-nav{
+    display: flex;  
+    margin-left: 93px;
+    &__list+ &__list{
+      margin-left: 50px;
+      }
+      &__link{
+      position: relative;
+      
+        padding-top: 32px;
+        padding-bottom: 32px;
+      
+        color: $primary-text-color;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        text-decoration: none;
+        transition-duration:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+       }
+        &__link--current::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 4px;
+        border-radius: 2px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: $accent-color;
+       }
+       &__link--current {
+        color: $accent-color;
+        }
+         &__link:hover,
+         &__link:focus {
+          color: $accent-color;
+       } 
+       
+    }
+    .nav-heder{
+      margin-left: 93px;
+    }
+    /* сайт nav */
+      .text {
+        display: flex;
+        margin-left: auto;
+        &__list+ &__list{
+       margin-left: 50px;
+       }
+        &__link{
+      align-items: center;
+      display: inline-flex;
+      color: $title-text-paragraph;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+        }       
+     &__header-icon:hover,
+     &__header-icon:focus,
+     &__link:hover, 
+     &__link:focus{
+       color:  $accent-color;
+       fill:   $accent-color;
+       }
+       &__header-icon{
+      fill: currentColor;
+        } 
+       &__header-icon{
+        width: 15px;
+        height: 16px;
+        margin-right: 10px;
+      }
+     }
